@@ -1,0 +1,20 @@
+name: file-organizer-env
+description: A simple environment where an agent organizes files into correct folders
+version: 1.0
+environment:
+  entry_point: env:FileOrganizerEnv
+api:
+  reset: reset
+  step: step
+  state: state
+tasks:
+  - name: easy
+    description: Organize 3 simple files
+  - name: medium
+    description: Organize 5 mixed files
+  - name: hard
+    description: Organize 8 complex files
+grader:
+  entry_point: grader:FileOrganizerGrader
+inference:
+  entry_point: inference:run_inference
